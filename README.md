@@ -1,46 +1,139 @@
 # 🚀 Codificação Back-End
 
-Este repositório foi criado para armazenar e organizar projetos, exercícios e estudos focados no desenvolvimento **Back-End**. Aqui são explorados conceitos fundamentais da criação de APIs, gerenciamento de rotas, servidores web e boas práticas de desenvolvimento.
+Repositório destinado aos estudos e exercícios de **desenvolvimento Back-End**, utilizando principalmente **JavaScript, Node.js e NPM**.
 
 ---
 
 ## 🎯 Objetivos
 
-- **Compreender o ecossistema Node.js:** Entender como funciona o ambiente de execução JavaScript fora do navegador.
-- **Desenvolver APIs RESTful:** Utilizar o Express.js para criar rotas, manipular requisições/respostas e integrar serviços.
-- **Gerenciar Dependências:** Utilizar o NPM para instalar, atualizar e publicar pacotes necessários no desenvolvimento.
-- **Versionamento de Código:** Utilizar Git e GitHub para controle de versão, histórico de commits e documentação de projetos.
-- **Estruturação de Projetos:** Aplicar padrões de arquitetura e boas práticas na organização de código back-end.
+* Revisar conceitos básicos de **Node.js** e **NPM**.
+* Utilizar módulos nativos do Node.js.
+* Praticar JavaScript no ambiente Back-End.
+* Obter informações do sistema utilizando o módulo `os`.
+* Compreender a estrutura do `package.json`.
 
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
 
-| Tecnologia / Ferramenta | Descrição |
-| :--- | :--- |
-| **JavaScript (ES6+)** | Linguagem principal para desenvolvimento das lógicas do servidor. |
-| **Node.js** | Ambiente de execução JavaScript no lado do servidor (Server-Side). |
-| **Express.js** | Framework web rápido e minimalista para criação de rotas e APIs REST. |
-| **NPM (Node Package Manager)** | Gerenciador de pacotes para manipulação de dependências do projeto. |
-| **Git & GitHub** | Sistema de controle de versão distribuído e hospedagem de código. |
+| Tecnologia       | Utilização                |
+| :--------------- | :------------------------ |
+| **JavaScript**   | Desenvolvimento do código |
+| **Node.js**      | Execução do JavaScript    |
+| **NPM**          | Gerenciamento do projeto  |
+| **Módulo `os`**  | Informações do sistema    |
+| **Git & GitHub** | Versionamento do projeto  |
 
 ---
 
 ## 📚 Conteúdos Abordados
 
-
+* Node.js
+* NPM
+* `package.json`
+* CommonJS
+* `require()`
+* Módulo `os`
+* Memória RAM
+* Processador
+* Sistema operacional
+* Execução pelo terminal
 
 ---
 
-## 🚀 Como Executar os Projetos Localmente
+## 💻 Diagnóstico do Servidor
 
-### Pré-requisitos
-Antes de começar, garanta que você possui instalado em sua máquina:
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (com o **NPM** incluso)
+Exercício utilizando o módulo **`os`** para consultar informações do computador.
 
-### Passos para execução
+O programa verifica:
 
-1. **Clonar o repositório:**
-   ```bash
-   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+* 🖥️ Sistema operacional
+* 💾 Memória RAM total
+* 💾 Memória RAM livre
+* ⚙️ Cores do processador
+* 🧠 Modelo do processador
+* 🚀 Velocidade do processador
+
+### Código
+
+```javascript
+const os = require('os');
+
+const plataforma = os.platform();
+
+const memoriaTotal = (os.totalmem() / (1024 ** 3)).toFixed(2);
+
+const memoriaLivre = (os.freemem() / (1024 ** 3)).toFixed(2);
+
+const processador = os.cpus();
+
+console.log('=== DIAGNÓSTICO DO SERVIDOR ===');
+
+console.log(`Arquitetura OS: ${plataforma}`);
+console.log(`Memória RAM Total: ${memoriaTotal}`);
+console.log(`Memória RAM Livre: ${memoriaLivre}`);
+console.log(`Cores do Processador: ${processador.length}`);
+console.log(`Processador: ${processador[0].model}`);
+console.log(`Velocidade do processador: ${processador[0].speed}MHz`);
+```
+
+---
+
+## ▶️ Como Executar
+
+```bash
+node index.js
+```
+
+### 📊 Resultado esperado
+
+```text
+=== DIAGNÓSTICO DO SERVIDOR ===
+Arquitetura OS: [sistema operacional]
+Memória RAM Total: [memória total]
+Memória RAM Livre: [memória disponível]
+Cores do Processador: [quantidade de cores]
+Processador: [modelo do processador]
+Velocidade do processador: [velocidade em MHz]
+```
+
+> Os valores são obtidos automaticamente pelo computador utilizado.
+
+---
+
+## 📦 `package.json`
+
+```json
+{
+  "name": "aula01-revisao-nodejs-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alvaro Ronaldy Santos Alves",
+  "license": "ISC",
+  "type": "commonjs"
+}
+```
+
+---
+
+## 📁 Estrutura
+
+```text
+aula01-revisao-nodejs-npm/
+├── index.js
+├── package.json
+└── README.md
+```
+
+---
+
+## 👨‍💻 Autor
+
+**Alvaro Ronaldy Santos Alves**
+
+Projeto desenvolvido durante os estudos de **Codificação Back-End**.
