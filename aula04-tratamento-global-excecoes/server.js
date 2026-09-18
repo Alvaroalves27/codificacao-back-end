@@ -30,3 +30,18 @@ app.get('/erro-assincrono',async (req, res, next) =>{
         next(erro);
     }
 });
+
+app.use((err, req, res, next) => {
+    console.error(`[LOG DE ERRO INTERNO]: ${err.stack}`);
+
+    const status = err.status || 500;
+    res.status(status).json({
+        succss: false,
+        message: err.message || 'Erro interno do Servidor'
+    });
+});
+
+app.listen(3000, ()=>{
+    console.log('Servidor Imortal rodando na porta 3000');
+});
+
