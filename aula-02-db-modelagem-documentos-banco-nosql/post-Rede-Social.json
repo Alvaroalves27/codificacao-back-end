@@ -1,0 +1,37 @@
+{
+    "texto": "Neymar Jr vence a bola de ouro em 2026",
+    "autor": "Cazé TV ",
+    "data": "2026-11-27",
+    "curtidas":[
+    {"nome": "Cristiano_Ronaldo"},
+    {"nome": "Lionel_Messi"},
+    {"nome": "Kylian_Mbappé"},
+    {"nome": "Harry_Kane"},
+    {"nome": "Erling_Haaland"}
+    ],
+    "comentarios":[
+    
+      {
+         "autor":"Cristiano_Ronaldo",
+       "texto":"Parabéns Neymar, você merece muito"
+    },
+     {  
+        "autor":"Lionel_Messi",
+       "texto":"Grande conquista, Neymar! Continue brilhando Garoto"
+   },
+      {
+       "autor":"Kylian_Mbappé",
+       "texto":"Parabéns Neymar, você é um exemplo para todos"
+    },
+    {
+       "autor":"Harry_Kane",
+       "texto":"Parabéns Neymar, você é um grande jogador que sempre mereceu tudo oque conquistou"
+    },
+    {
+       "autor":"Erling_Haaland",
+       "texto":"Parabéns Neymar, você é um Garoto de ouro"
+    }
+ ]
+    }
+
+    
